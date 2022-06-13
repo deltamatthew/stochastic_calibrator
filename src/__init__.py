@@ -1,0 +1,1 @@
+from .mm_high_freq_vanilla import MMHighFrequencyStrategy

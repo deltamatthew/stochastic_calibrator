@@ -1,0 +1,81 @@
+{
+    "HEARTBEAT": {
+        "interval": 600
+    },
+    "LOG": {
+        "backup_count": 1,
+        "clear": false,
+        "console": false,
+        "level": "INFO",
+        "name": "quant.log",
+        "path": "logs"
+    },
+    "MAKER_ACCOUNTS": [
+        {
+            "access_key": "a9e16a51d547eb6a49c159f1d040a417f9650c40ad36079507bd040f4c29130d",
+            "account": "cheuknam@deltabay.capital",
+            "platform": "binance_future",
+            "secret_key": "bedfb9351db87e5c47f5993de5388b411556c671052ecd4afbcfc82047afc623"
+        }
+    ],
+    "MONGODB": {
+        "host": "127.0.0.1",
+        "password": "",
+        "port": 27017,
+        "username": ""
+    },
+    "RABBITMQ": {
+        "host": "127.0.0.1",
+        "password": "guest",
+        "port": 5672,
+        "username": "guest"
+    },
+    "check_market_freq": 10,
+    "market_config": [
+        {
+            "version": 2,
+            "record_freq": 10,
+            "is_pickle_file_used": false,
+            "diffusion_params": {
+                "initial_params":{"sigma20": 3.0},
+                "decaying_length": 3600,
+                "kalman_filter_params": {
+                    "curr_measurement_noise_cov": 1000.0,
+                    "curr_state": 0.5,
+                    "curr_state_estimate_cov": 1.0,
+                    "curr_state_noise_cov": 1e-07,
+                    "gamma": 4.0
+                },
+                "lookback_period": 3600,
+                "required_prop": 0.9,
+                "sampling_freq": 10
+            },
+            "gamma": 0.01,
+            "is_mk_on": true,
+            "leverage": 5,
+            "market_impact_params": {
+                "decaying_length": 3600,
+                "sampling_freq": 60
+            },
+            "params_path": "C:/Users/supawat/Desktop/Python",
+            "pickle_diffusion_path": "C:/Users/supawat/Desktop/Python/pickle/pickle_diffusion_processes",
+            "pickle_market_arrival_path": "C:/Users/supawat/Desktop/Python/pickle/pickle_arrival_processes",
+            "platform": "aax_future",
+            "price_precision": 2,
+            "size_precision": 3,
+            "multiplier": 0.001,
+            "symbol": "BTC/USDTFP",
+            "market_arrival_params": {
+                "initial_params":{"A": 0.1, "k": 0.3},
+                "decaying_length": 86400,
+                "initial_reference_price": 30000,
+                "lookback_period": 21600,
+                "required_prop": 0.9,
+                "sampling_freq": 10,
+                "update_freq": 60
+            }
+        }
+    ],
+    "platform": "aax_future",
+    "strategy": "mm_high_frequency_vanilla"
+}
